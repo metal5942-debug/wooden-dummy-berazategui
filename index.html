@@ -668,63 +668,134 @@
             <div class="section-header text-center">
                 <span class="section-tag"><i class="fa-solid fa-comments"></i> Testimonios Reales</span>
                 <h2 class="section-title">Lo que Opinan Nuestros Clientes</h2>
-                <p class="section-subtitle">Calificación promedio de 4.9/5 basada en clientes de toda la Argentina</p>
+                <p class="section-subtitle">Calificación promedio de 4.9/5 basada en opiniones de Mercado Libre, Instagram y Facebook</p>
             </div>
 
-            <div class="reviews-grid">
-                
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        <span class="platform-tag fb"><i class="fa-brands fa-facebook"></i> Facebook</span>
-                    </div>
-                    <p class="review-text">
-                        "Excelente calidad de terminación. El rebote de los brazos es perfecto para el entrenamiento de Chi Sao. Muy recomendable el trabajo de carpintería y la atención."
-                    </p>
-                    <div class="reviewer-info">
-                        <div class="reviewer-avatar">JM</div>
-                        <div>
-                            <h4>Javier M.</h4>
-                            <span>Practicante de Wing Chun • Buenos Aires</span>
+            <div class="reviews-carousel-wrapper">
+                <button class="reviews-nav prev" id="reviews-prev" aria-label="Opinión anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="reviews-viewport" id="reviews-viewport">
+                    <div class="reviews-track" id="reviews-track">
+                        
+                        <!-- Review 1: Mercado Libre -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="platform-tag ml"><i class="fa-solid fa-bag-shopping"></i> Mercado Libre</span>
+                            </div>
+                            <p class="review-text">
+                                "Excelente dummy, madera maciza de primera calidad. Las medidas tradicionales son exactas a las especificaciones de Wing Chun y el embalaje para el interior del país llegó impecable. 100% recomendable."
+                            </p>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">LG</div>
+                                <div>
+                                    <h4>Lucas G.</h4>
+                                    <span>Comprador Verificado • Córdoba</span>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Review 2: Facebook -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="platform-tag fb"><i class="fa-brands fa-facebook"></i> Facebook</span>
+                            </div>
+                            <p class="review-text">
+                                "Excelente calidad de terminación. El rebote de los brazos es perfecto para el entrenamiento de Chi Sao. Muy recomendable el trabajo de carpintería y la atención."
+                            </p>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">JM</div>
+                                <div>
+                                    <h4>Javier M.</h4>
+                                    <span>Practicante de Wing Chun • Buenos Aires</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 3: Instagram -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="platform-tag ig"><i class="fa-brands fa-instagram"></i> Instagram</span>
+                            </div>
+                            <p class="review-text">
+                                "Compré el modelo para departamento y es súper sólido. El nivel de detalle en la madera y el encastre impresiona. La atención de 10 de principio a fin."
+                            </p>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">ER</div>
+                                <div>
+                                    <h4>Estefanía R.</h4>
+                                    <span>Practicante de Artes Marciales • Rosario</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 4: Mercado Libre -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="platform-tag ml"><i class="fa-solid fa-bag-shopping"></i> Mercado Libre</span>
+                            </div>
+                            <p class="review-text">
+                                "Muy conforme con la compra. El modelo con base triangular es comodísimo para el living o dojo chico, súper firme y no se mueve ni un centímetro al golpear. La madera es de calidad real."
+                            </p>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">GB</div>
+                                <div>
+                                    <h4>Gustavo B.</h4>
+                                    <span>Comprador Verificado • Mendoza</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 5: Facebook -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="platform-tag fb"><i class="fa-brands fa-facebook"></i> Facebook</span>
+                            </div>
+                            <p class="review-text">
+                                "La mejor relación precio-calidad de Argentina. Equipamos nuestra escuela con dummies de pared y la durabilidad tras años de uso intensivo y clases diarias es impecable."
+                            </p>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">TN</div>
+                                <div>
+                                    <h4>Escuela Tigre Negro</h4>
+                                    <span>Dojo / Escuela de Artes Marciales</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 6: Instagram -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <span class="platform-tag ig"><i class="fa-brands fa-instagram"></i> Instagram</span>
+                            </div>
+                            <p class="review-text">
+                                "Un trabajo artesanal de otro nivel. Los brazos tienen la flexibilidad justa para practicar las formas sin lastimar las articulaciones. Los pads protectores y el lustre oscuro impecables."
+                            </p>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">DV</div>
+                                <div>
+                                    <h4>Damián V.</h4>
+                                    <span>Instructor de Kung Fu • La Plata</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        <span class="platform-tag ig"><i class="fa-brands fa-instagram"></i> Instagram</span>
-                    </div>
-                    <p class="review-text">
-                        "Compré el modelo para departamento y es súper sólido. El nivel de detalle en la madera y el encastre impresiona. La atención de 10 de principio a fin."
-                    </p>
-                    <div class="reviewer-info">
-                        <div class="reviewer-avatar">ER</div>
-                        <div>
-                            <h4>Estefanía R.</h4>
-                            <span>Practicante de Artes Marciales • Rosario</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        <span class="platform-tag goog"><i class="fa-brands fa-google"></i> Google Review</span>
-                    </div>
-                    <p class="review-text">
-                        "La mejor relación precio-calidad de Argentina. Equipamos nuestra escuela con 3 dummies de pared y la durabilidad tras años de uso intensivo es impecable."
-                    </p>
-                    <div class="reviewer-info">
-                        <div class="reviewer-avatar">TN</div>
-                        <div>
-                            <h4>Escuela Tigre Negro</h4>
-                            <span>Dojo / Escuela de Artes Marciales</span>
-                        </div>
-                    </div>
-                </div>
-
+                <button class="reviews-nav next" id="reviews-next" aria-label="Opinión siguiente">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
+
+            <div class="reviews-dots" id="reviews-dots"></div>
         </div>
     </section>
 
