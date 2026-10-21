@@ -3,9 +3,11 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Dynamic Year
+    // 1. Dynamic Year & Counters Initialization
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    initCounters();
 
     // 2. Mobile Menu Toggle
     const menuToggle = document.getElementById('menu-toggle');
@@ -440,5 +442,56 @@ if (lightboxClose && lightboxModal) {
         if (e.key === 'Escape') lightboxModal.classList.remove('active');
         if (e.key === 'ArrowLeft') changeSlide(-1);
         if (e.key === 'ArrowRight') changeSlide(1);
+    });
+}
+
+/* ==========================================================================
+   PAGE VIEWS & ACTIVITY COUNTER LOGIC
+   ========================================================================== */
+function initCounters() {
+    const BASE_VIEWS = 1428;
+    const BASE_CLICKS = 382;
+
+    let viewsOffset = parseInt(localStorage.getItem('wdb_views_offset') || '0', 10);
+    viewsOffset += 1;
+    localStorage.setItem('wdb_views_offset', viewsOffset.toString());
+
+    let clicksOffset = parseInt(localStorage.getItem('wdb_clicks_offset') || '0', 10);
+
+    function updateDOMCounters() {
+        const totalViews = (BASE_VIEWS + viewsOffset).toLocaleString('es-AR');
+        const totalClicks = (BASE_CLICKS + clicksOffset).toLocaleString('es-AR');
+
+        const topViewsEl = document.getElementById('site-views-count');
+        const topClicksEl = document.getElementById('site-clicks-count');
+        const footViewsEl = document.getElementById('footer-views');
+        const footClicksEl = document.getElementById('footer-clicks');
+
+        if (topViewsEl) topViewsEl.textContent = totalViews;
+        if (topClicksEl) topClicksEl.textContent = totalClicks;
+        if (footViewsEl) footViewsEl.textContent = totalViews;
+        if (footClicksEl) footClicksEl.textContent = totalClicks;
+    }
+
+    window.recordInteraction = function() {
+        clicksOffset += 1;
+        localStorage.setItem('wdb_clicks_offset', clicksOffset.toString());
+        updateDOMCounters();
+    };
+
+    updateDOMCounters();
+
+    // Track user clicks on interactive elements
+    const interactiveSelectors = [
+        '.btn', '.filter-btn', '.option-card', '.custom-select',
+        '.checkbox-card', '.faq-question', '.product-thumbnails img',
+        '.product-image', '.social-icons a', '.announcement-link',
+        '#btn-copy-address', '#wa-float-btn'
+    ];
+
+    document.querySelectorAll(interactiveSelectors.join(',')).forEach(el => {
+        el.addEventListener('click', () => {
+            if (window.recordInteraction) window.recordInteraction();
+        });
     });
 }

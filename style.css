@@ -235,6 +235,57 @@ img {
     font-weight: 600;
 }
 
+.live-activity-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid var(--border-gold);
+    padding: 0.25rem 0.85rem;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.live-activity-pill strong {
+    color: var(--primary-gold);
+    font-weight: 700;
+}
+
+.live-activity-pill i {
+    color: var(--primary-gold);
+}
+
+.pill-divider {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-counter-badges {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.counter-chip {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-light);
+    padding: 0.3rem 0.75rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.counter-chip strong {
+    color: var(--primary-gold);
+}
+
+.counter-chip i {
+    color: var(--primary-gold);
+}
+
 .announcement-link {
     color: var(--whatsapp-green);
     font-weight: 600;
